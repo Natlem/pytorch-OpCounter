@@ -17,12 +17,11 @@ setup(
     # Metadata
     name='thop',
     version=VERSION,
-    author='Ligeng Zhu',
-    author_email='lykensyu+github@gmail.com',
-    url='https://github.com/Lyken17/pytorch-OpCounter/',
-    description='A tool to count the FLOPs of PyTorch model.',
+    author='Le Thanh',
+    author_email='nmlethanh91@gmail.com',
+    url='https://github.com/Natlem/pytorch-OpCounter/',
+    description='Forked of https://github.com/Lyken17/pytorch-OpCounter that can handle other architecture',
     long_description=readme,
-    license='MIT',
 
     # Package info
     packages=find_packages(exclude=('*test*',)),
