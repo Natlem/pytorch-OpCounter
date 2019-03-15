@@ -2,7 +2,7 @@ import logging
 
 import torch
 import torch.nn as nn
-from count_hooks import *
+from .count_hooks import *
 import resnet_cifar
 import model_adapters
 
@@ -98,8 +98,3 @@ def profile(model, model_adapter, input_size, custom_ops={}, device="cpu"):
         handler.remove()
 
     return total_ops, total_params
-
-if __name__ == "__main__":
-
-    model = resnet_cifar.resnet56_cifar()
-    flops, p = profile(model, model_adapters.ResNetAdapter(), input_size=(1,3,32,32))
